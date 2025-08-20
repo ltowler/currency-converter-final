@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import ExchangeRates from './pages/ExchangeRates';
+import { Route, Routes } from "react-router-dom";
+import Footer from './components/footer';
+import './components/footer.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page-wrapper">
+      <main className="main-content">
+        <h1 className="site-h1">The Currency Extractor</h1>
+        <Navbar />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/exchange-rates" element={<ExchangeRates />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }
