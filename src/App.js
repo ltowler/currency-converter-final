@@ -1,6 +1,5 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import Contact from './pages/Contact';
 import Home from './pages/Home';
 import ExchangeRates from './pages/ExchangeRates';
 import { Route, Routes } from "react-router-dom";
@@ -17,7 +16,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/exchange-rates" element={<ExchangeRates />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </main>
